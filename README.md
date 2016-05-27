@@ -1,10 +1,20 @@
-# DirectAdmin API client
+# CodeIgniter Fork
 
-[![Build Status](https://travis-ci.org/omines/directadmin.svg?branch=master)](https://travis-ci.org/omines/directadmin)
-[![Coverage Status](https://coveralls.io/repos/omines/directadmin/badge.svg?branch=master&service=github)](https://coveralls.io/github/omines/directadmin?branch=master)
-[![Scrutinizer](https://img.shields.io/scrutinizer/g/omines/directadmin.svg)](https://scrutinizer-ci.com/g/omines/directadmin/?branch=master)
-[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/47a71204-f274-4416-9db1-9773d65845ca.svg)](https://insight.sensiolabs.com/projects/47a71204-f274-4416-9db1-9773d65845ca)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/omines/directadmin/master/LICENSE)
+In order to use this lib with CodeIgniter, i have to get rid of all the fancy pancy stuff :)
+
+* Added autoloader
+
+* Removed namespaces
+* Removed tests
+* Removed composer
+
+* Added guzzle for codeignier (https://github.com/rohitbh09/codeigniter-guzzle)
+
+--
+
+
+
+# DirectAdmin API client
 
 This is a PHP client library to manage DirectAdmin control panel servers. We simply decided to develop this as we needed
 automation of our own DirectAdmin servers, and the existing implementations were unsupported and incomplete.
@@ -13,30 +23,10 @@ automation of our own DirectAdmin servers, and the existing implementations were
 
 ## Installation
 
-[![Packagist](https://img.shields.io/packagist/v/omines/directadmin.svg)](https://packagist.org/packages/omines/directadmin)
-[![Packagist](https://img.shields.io/packagist/vpre/omines/directadmin.svg)](https://packagist.org/packages/omines/directadmin#dev-master)
+Just copy the DA & Guzzle folders to application/libraries
 
-The recommended way to install this library is through [Composer](http://getcomposer.org):
-```bash
-composer require omines/directadmin
-```
-
-If you're not familiar with `composer` follow the installation instructions for
-[Linux/Unix/Mac](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) or
-[Windows](https://getcomposer.org/doc/00-intro.md#installation-windows), and then read the
-[basic usage introduction](https://getcomposer.org/doc/01-basic-usage.md).
-
-## Dependencies
-
-The library uses [Guzzle 6](https://github.com/guzzle/guzzle) as its HTTP communication layer. PHP versions supported
-are 5.5, 5.6, 7.0 and hhvm.
 
 ## Basic usage
-
-To set up the connection use one of the base functions:
-
-```php
-use Omines\DirectAdmin\DirectAdmin;
 
 $adminContext = DirectAdmin::connectAdmin('http://hostname:2222', 'admin', 'pass');
 $resellerContext = DirectAdmin::connectReseller('http://hostname:2222', 'reseller', 'pass');
@@ -71,6 +61,8 @@ Pull requests should in general include proper unit tests for the implemented or
 For more information about unit testing see the `README.md` in the tests folder.
 
 ## Legal
+
+this is a fork of:
 
 This software was developed for internal use at [Omines Full Service Internetbureau](https://www.omines.nl/)
 in Eindhoven, the Netherlands. It is shared with the general public under the permissive MIT license, without
